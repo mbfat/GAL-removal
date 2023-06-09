@@ -13,7 +13,7 @@ turn off 'show only attributes that have values'
 add the attribute
 msExchHideFromAddressLists
 toggle it to TRUE
-run the command
+run the command (not necessary but could speed things along)
 Start-ADSyncSyncCycle -PolicyType Delta
 wait until Microsoft gets around to updating your GAL
 it may help to close outlook to attempt to get an update one
