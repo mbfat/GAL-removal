@@ -15,7 +15,7 @@ msExchHideFromAddressLists
 toggle it to TRUE
 run the command
 Start-ADSyncSyncCycle -PolicyType Delta
-wait until Microsoft get around to updating your GAL
+wait until Microsoft gets around to updating your GAL
 it may help to close outlook to attempt to get an update one
 
 
