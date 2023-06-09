@@ -1,0 +1,23 @@
+you.com ai bot
+
+why does hiding from GAL fail in exchange---
+There are several reasons why hiding a user from the Global Address List (GAL) in Exchange may fail. One common reason is that the msExchHideFromAddressLists attribute is not set correctly. This attribute needs to be set to "True" in order to hide the user from the GAL. Another reason could be that the user account is not synchronized properly between on-premises Active Directory and Exchange Online, which can cause the GAL to not properly reflect the changes made on one system. Additionally, if there are errors in the Directory Synchronization process, this can also cause issues with hiding users from the GAL. Finally, it is also possible that there may be a bug or issue within Exchange itself that is causing the problem.
+why does hiding from GAL fail in exchange online---
+Hiding a user from the Global Address List (GAL) in Exchange Online can fail due to several reasons. One common reason is that the msExchHideFromAddressLists attribute is not set to "True" or is not replicated correctly across the Exchange server environment. Another reason is when the user account is not synchronized properly between the on-premises Active Directory and Exchange Online environments. This can cause the GAL to not properly reflect the changes made on one system. Additionally, errors in the Directory Synchronization process can also cause issues with hiding users from the GAL. In some cases, this issue may also be caused by some bugs or glitches within Exchange Online.
+
+SOLUTION
+go into ad
+select the user/properties/attribute editor
+click filter
+turn off 'show only attributes that have values'
+add the attribute
+msExchHideFromAddressLists
+toggle it to TRUE
+run the command
+Start-ADSyncSyncCycle -PolicyType Delta
+wait until Microsoft get around to updating your GAL
+it may help to close outlook to attempt to get an update one
+
+
+
+
